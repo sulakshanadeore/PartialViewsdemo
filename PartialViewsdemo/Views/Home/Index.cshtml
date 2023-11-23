@@ -1,0 +1,21 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+<div style="width:400px;height:100px">
+    <h1>@{Html.RenderPartial("_DisplayTime");}</h1>
+    <h1>@Html.Partial("_DisplayTime")</h1>
+
+</div>
+
+
+<div>
+    <ol>
+        @foreach (var item in ViewBag.listdata)
+        {
+            <li>@item</li>
+        }
+    </ol>
+</div>
+<div>
+    <p>@Html.Partial("_Address")</p>
+</div>
